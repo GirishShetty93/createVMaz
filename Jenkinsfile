@@ -17,7 +17,7 @@ stages{
     }
     stage("Azure Terraform Login") {
 	steps {
-	   sh "az login --service-principal -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID"
+	   sh "az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID"
 	}
     }
     stage('Terraform init'){
