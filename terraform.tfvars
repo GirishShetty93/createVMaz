@@ -1,0 +1,15 @@
+rg_name="girishnew"
+location="centralindia"
+vnet_name="girishnew-vnet"
+vnet_space=["10.0.0.0/16"]
+subnet_name="giris_subnet"
+subnet_space=["10.0.2.0/24"]
+nic_name="girish_nic"
+ip_name="girish_ip"
+pip_name="girish_pip"
+disk_name="girishnew_disk1"
+disk_size="64"
+vm_name="girishsw_vm"
+vm_size="Standard_D2ads_v5"
+vm_user="girish"
+vm_password="Girish1234!"
