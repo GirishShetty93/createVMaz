@@ -8,6 +8,7 @@ environment {
     ARM_CLIENT_SECRET="bc5180b2-167d-4d5a-8898-1e02126040a3"
     ARM_SUBSCRIPTION_ID="7de549ce-97a6-4181-a393-0a86e3c9525c"
     ARM_TENANT_ID="7453a23a-f546-4af3-8d42-5b4505f1049a"
+
 }
 stages{
     stage('git checkout'){
