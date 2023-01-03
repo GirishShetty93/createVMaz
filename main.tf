@@ -26,9 +26,6 @@ azurerm_subnet.subnet, azurerm_virtual_network.vnet]
     name = var.ip_name
     subnet_id = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
-    private_ip_address = "10.0.2.5"
-    public_ip_address_allocation = "Dynamic" 
-    public_ip_address_id = azurerm_public_ip.pip.id
   }
 }
 resource "azurerm_managed_disk" "disk" {
