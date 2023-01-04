@@ -16,6 +16,15 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes = var.subnet_space
   depends_on = [azurerm_resource_group.rg]
 }
+
+resource   "azurerm_public_ip" "pip"   { 
+   name = var.pip_name 
+   location = var.location 
+   resource_group_name = var.rg_name 
+   allocation_method = "Dynamic" 
+   sku = "Basic" 
+ } 
+
 resource "azurerm_network_interface" "nic" {
   name = var.nic_name
   location = var.location
@@ -26,8 +35,11 @@ azurerm_subnet.subnet, azurerm_virtual_network.vnet]
     name = var.ip_name
     subnet_id = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
+    private_ip_address = "10.0.2.5"
+    public_ip_address_id = azurerm_public_ip.pip.id
   }
 }
+
 resource "azurerm_managed_disk" "disk" {
   name = var.disk_name
   location = var.location
