@@ -1,5 +1,5 @@
 rg_name = "girish_tf_rg"
-location = ""uksouth"
+location = "canadacentral" 
 vnet_name = "girish_tf_vnet"
 vnet_space = ["10.0.0.0/16"]
 subnet_name = "girish_tf_subnet"
